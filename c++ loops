@@ -1,0 +1,64 @@
+//Program to Print First 10 Prime Numbers(for loop)
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i, j, count = 1, b = 0;
+    cout << "First Ten Prime Numbers Are\n"
+         << "2";
+    for (i = 3; i > 0; ++i)
+    {
+        for (j = 2; j <= i / 2; ++j)
+        {
+            if (i % j == 0)
+            {
+                b = 1;
+                break;
+            }
+        }
+        if (b == 0)
+        {
+            cout << "\n"
+                 << i;
+            count++;
+        }
+        b = 0;
+        if (count == 10)
+            break;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+// Program to Print First 10 Prime Numbers(while loop)
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n = 2, count = 0;
+    while (count < 10)
+    {
+        int i = 2;
+        while (i <= n - 1)
+        {
+            if (n % i == 0)
+                break;
+            i++;
+        }
+        if (i == n)
+        {
+            cout << n << " "<<endl;
+            count++;
+        }
+        n++;
+    }
+    return 0;
+}
